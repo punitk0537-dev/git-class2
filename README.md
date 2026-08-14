@@ -1,13 +1,13 @@
-# Terraform Code Information
+# 🚀 Terraform Code Information ☁️
 
-Is repository mein Azure cloud resources ko Terraform ke through create karne ka code define kiya gaya hai.
+Is repository mein Azure cloud resources ko Terraform ke through create karne ka code define kiya gaya hai. 💻✨
 
 ---
 
-## 📄 Code Files & Explanation
+## 📁 Code Files & Explanation 📑
 
-### 1. `provider.tf` (Azure Provider Configuration)
-Is file mein Terraform ko Microsoft Azure ke sath connect karne ke liye provider configuration likhi gayi hai:
+### 1️⃣ ⚙️ `provider.tf` (Azure Provider Configuration)
+Is file mein Terraform ko Microsoft Azure ke sath connect karne ke liye provider configuration likhi gayi hai: 🔌🌐
 
 ```hcl
 terraform {
@@ -25,14 +25,14 @@ provider "azurerm" {
 }
 ```
 
-- **`required_providers`**: Terraform ko batata hai ki `hashicorp/azurerm` provider use karna hai.
-- **`version = "=5.0.0"`**: AzureRM provider ka specific `5.0.0` version lock kiya gaya hai.
-- **`provider "azurerm"`**: Azure provider ko initialize karta hai (`features {}` block required hota hai).
+- 🔌 **`required_providers`**: Terraform ko batata hai ki `hashicorp/azurerm` provider use karna hai.
+- 📌 **`version = "=5.0.0"`**: AzureRM provider ka specific `5.0.0` version lock kiya gaya hai.
+- 🛠️ **`provider "azurerm"`**: Azure provider ko initialize karta hai (`features {}` block required hota hai).
 
 ---
 
-### 2. `rg.tf` (Resource Group Definition)
-Is file mein Azure Resource Group ko create karne ka resource block define kiya gaya hai:
+### 2️⃣ 🏗️ `rg.tf` (Resource Group Definition)
+Is file mein Azure Resource Group ko create karne ka resource block define kiya gaya hai: 📦🏢
 
 ```hcl
 # Create a resource group
@@ -42,30 +42,33 @@ resource "azurerm_resource_group" "rg" {
 }
 ```
 
-- **Resource Type**: `azurerm_resource_group` (Azure Resource Group create karta hai).
-- **Terraform Resource Name**: `rg` (Terraform internal reference ke liye).
-- **`name`**: `"punit-rg"` (Azure portal par resource group ka actual name).
-- **`location`**: `"West Europe"` (Azure region jahan resource group create hoga).
+- 🏷️ **Resource Type**: `azurerm_resource_group` (Azure Resource Group create karta hai).
+- 🔖 **Terraform Resource Name**: `rg` (Terraform internal reference ke liye).
+- 📛 **`name`**: `"punit-rg"` (Azure portal par resource group ka actual name).
+- 📍 **`location`**: `"West Europe"` (Azure region jahan resource group create hoga).
 
 ---
 
-## 📊 Summary of Resources
+## 📊 Summary of Resources 📋
 
-| Resource | Terraform Block | Resource Name | Region / Location | Provider |
+| 📦 Resource | 🧱 Terraform Block | 🏷️ Resource Name | 🌍 Region / Location | 🔌 Provider |
 | :--- | :--- | :--- | :--- | :--- |
-| **Resource Group** | `azurerm_resource_group.rg` | `punit-rg` | `West Europe` | `azurerm` (v5.0.0) |
+| **Azure Resource Group** | `azurerm_resource_group.rg` | `punit-rg` | `West Europe` | `azurerm` (v5.0.0) |
 
 ---
 
-## ⚡ Quick Commands
+## ⚡ Quick Commands 🚀
 
 ```bash
-# 1. Initialize Terraform & Provider
+# 1️⃣ Initialize Terraform & Download Provider Plugins
 terraform init
 
-# 2. Check Plan
+# 2️⃣ Preview Changes (Dry Run)
 terraform plan
 
-# 3. Apply Changes
+# 3️⃣ Apply & Create Resources in Azure
 terraform apply
+
+# 4️⃣ Destroy / Clean Up Resources (When not needed)
+terraform destroy
 ```
